@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Embed Project</title>
+    <script type="module" src="../static/script.js"></script>
+    <!--- Load Tableau JavaScript API V3  --->
+    <script type="module" src="https://embedding.tableauusercontent.com/tableau.embedding.3.1.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        hr { 
+            height:2px;
+            border-width:0;
+            color:gray;
+            background-color:gray;
+            border-width: 0px;
+        } 
+        </style>
+</head>
+
+<body>
+
+    <!--- Viz Component - renders on page load --->
+    <hr>
+    <div id="loadingcheck">
+        <div class="alert alert-info" role="alert">
+            <h3 id="loadingMessage">Please wait...</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="container" style="overflow: hidden;">
+        <tableau-viz id="tableauViz" hide-tabs=true touch-optimize=false disable-url-actions=false
+        debug=false
+        src="https://tableau.pispl.in/#/views/SalesDashboardPOC/SalesSummary"
+        toolbar="hidden"
+        device="Phone"
+        token="">
+        <viz-filter field="Current_SalesTeam" value="VIKAS ANAND"></viz-filter>
+        <viz-filter field="Is_MIS_Admin" value="False"></viz-filter>
+    </tableau-viz>
+    </div>
+    
+    <!-- <hr> -->
+
+    <!--- Created via Connected Apps-Tableau Playground --->
+    <!--- Andre de Vries - andredevries.dev --->
+
+</body>
+
+</html>
