@@ -1,0 +1,13 @@
+section#report-container {
+    height: calc(0.5625 * 100vw); /* 16:9 aspect ratio */
+    width: 70vw;
+    margin: auto;
+    margin-top: 16px;
+
+}
+
+@media only screen and (max-width: 760px) {
+    section#report-container {
+        height: calc(0.5625 * 200vw); /* 16:9 aspect ratio */
+    }
+}
