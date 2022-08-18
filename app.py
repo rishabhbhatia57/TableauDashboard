@@ -2,8 +2,10 @@ from flask import Flask, jsonify, request, render_template
 # from getJWT import getJWT
 from flask_cors import CORS, cross_origin
 import jwt
-import datetime
+from datetime import datetime
 import uuid
+import time
+import calendar
 from flask import jsonify
 # from connectedApps import signIntoConnectedApps, getConnectAppsList
 import json
@@ -15,10 +17,11 @@ cors = CORS(app)
 # CORS(app)
 # app.config["DEBUG"] = True
 
-ct = datetime.datetime.now()
+ct = datetime.now()
 
-ct5 = datetime.timedelta(minutes=5)
+# ct5 = datetime.timedelta(minutes=5)
 ts = int(ct.timestamp())
+
 
 @app.route('/')
 def index():
@@ -31,6 +34,8 @@ def index():
 
 @app.route('/GetJWT')
 def GetJWT():
+    print(ct)
+    print(ts)
     payload = {
     'jti' : str(uuid.uuid4()),
     'iss' : '6e57a52c-6629-4fea-a583-1c6a57983381', # connectedappclientid
