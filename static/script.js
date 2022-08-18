@@ -1,4 +1,4 @@
-  var url = 'http://127.0.0.1:5000/GetJWT';
+  var url = 'https://vetinatableau.azurewebsites.net/GetJWT';
     fetch(url, {
         method: 'GET',
     }).then(res => res.json())
