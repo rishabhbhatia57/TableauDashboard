@@ -6,6 +6,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
     }
 
 var url = 'https://vetinatableau.azurewebsites.net/GetJWT';
+// var url = 'http://127.0.0.1:5000/GetJWT';
     fetch(url, {
         method: 'GET',
     }).then(res => res.json())
