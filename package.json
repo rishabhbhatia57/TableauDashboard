@@ -1,0 +1,27 @@
+{
+  "name": "tabdashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishabhbhatia57/TableauDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishabhbhatia57/TableauDashboard/issues"
+  },
+  "homepage": "https://github.com/rishabhbhatia57/TableauDashboard#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7"
+  }
+}
