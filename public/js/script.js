@@ -5,7 +5,7 @@ let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
         newSettings = 'Phone'
     }
 
-var url = 'https://vetinatableau.azurewebsites.net/GetJWT';
+var url = 'https://vetinatableaupython.azurewebsites.net/GetJWT';
     fetch(url, {
         method: 'GET',
     }).then(res => res.json())
