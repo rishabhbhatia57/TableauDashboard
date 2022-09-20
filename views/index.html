@@ -34,14 +34,25 @@
     </div>
     <hr>
 
-    <div class="container" style="overflow: hidden;">
+    
+       
+
+        
         <tableau-viz id="tableauViz" hide-tabs=true touch-optimize=false disable-url-actions=false debug=false
-            src="https://tableau.pispl.in/#/views/SalesDashboardPOC/SalesSummary" toolbar="hidden" device="" token="">
+            src="https://tableau.pispl.in/#/site/Abbott/views/SalesDashboardPOC/SalesSummary" toolbar="hidden" device="" token="">
             <viz-filter id="Current_SalesTeamID" field="Current_SalesTeam" value=""></viz-filter>
             <viz-filter id="Is_MIS_AdminID" field="Is_MIS_Admin" value=""></viz-filter>
         </tableau-viz>
-    </div>
 
+        <!-- <hr> -->
+
+<!-- 
+         <tableau-viz id="tableauViz" hide-tabs=true touch-optimize=false disable-url-actions=false debug=false
+            src="https://tableau.pispl.in/#/site/Abbott/views/AbbottBIReports/SalesDashboard" toolbar="hidden" device="" token="">
+            <viz-filter id="Current_SalesTeamID" field="Current_SalesTeam" value=""></viz-filter>
+            <viz-filter id="Is_MIS_AdminID" field="Is_MIS_Admin" value=""></viz-filter>
+        </tableau-viz> -->
+    
     <!-- <hr> -->
 
     <!--- Created via Connected Apps-Tableau Playground --->
@@ -67,7 +78,7 @@
     Is_MIS_AdminIDFilterTag.setAttribute("value", Is_MIS_AdminValue);
 
     var url = 'https://vetinatableaupython.azurewebsites.net/GetJWT';
-    // var url = 'http://127.0.0.1:5000/GetJWT';
+    // url = 'http://127.0.0.1:5000/GetJWT';
     fetch(url, {
         method: 'GET',
     }).then(res => res.json())
