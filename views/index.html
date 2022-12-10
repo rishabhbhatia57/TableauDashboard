@@ -47,10 +47,11 @@
         <!-- <hr> -->
 
 
-         <tableau-viz id="tableauViz" hide-tabs=true touch-optimize=false disable-url-actions=false debug=false
-            src="https://tableau.pispl.in/#/site/Abbott/views/AbbottBIReports/SalesDashboard" toolbar="yes" tooltip="no" device="" token="">
-            <viz-filter id="Current_SalesTeamID" field="Current_SalesTeam" value=""></viz-filter>
-            <viz-filter id="Is_MIS_AdminID" field="Is_MIS_Admin" value=""></viz-filter>
+         <tableau-viz id="tableauViz" hide-tabs=false  touch-optimize=false disable-url-actions=false debug=false
+            src="https://analytics.pispl.in/#/site/Vetina/views/VetinaBIReports/SalesDashboard"
+             toolbar="yes" allowFullScreen="true" tooltip="yes" device="" token="" >
+            <!-- <viz-filter id="Current_SalesTeamID" field="Current_SalesTeam" value=""></viz-filter>
+            <viz-filter id="Is_MIS_AdminID" field="Is_MIS_Admin" value=""></viz-filter> -->
         </tableau-viz>
     
     <hr>
@@ -74,11 +75,11 @@
 
     var Current_SalesTeamFilterTag = document.getElementById("Current_SalesTeamID");
     var Is_MIS_AdminIDFilterTag = document.getElementById("Is_MIS_AdminID");
-    Current_SalesTeamFilterTag.setAttribute("value", Current_SalesTeamValue);
-    Is_MIS_AdminIDFilterTag.setAttribute("value", Is_MIS_AdminValue);
+    // Current_SalesTeamFilterTag.setAttribute("value", Current_SalesTeamValue);
+    // Is_MIS_AdminIDFilterTag.setAttribute("value", Is_MIS_AdminValue);
 
-    var url = 'https://vetinatableaupython.azurewebsites.net/GetJWT';
-    // url = 'http://127.0.0.1:5000/GetJWT';
+    // var url = 'https://vetinatableaupython.azurewebsites.net/GetJWT';
+    url = 'http://127.0.0.1:5000/GetJWT';
     fetch(url, {
         method: 'GET',
     }).then(res => res.json())
